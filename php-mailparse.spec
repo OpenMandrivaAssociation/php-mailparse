@@ -6,7 +6,7 @@
 Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
 Version:	2.1.1
-Release:	%mkrel 8
+Release:	%mkrel 9
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/mailparse
@@ -16,8 +16,6 @@ Patch0:		mailparse-0.9.4-silly_fix.patch
 Requires:	php-cli >= 3:5.2.0
 Requires:	php-mbstring
 BuildRequires:	php-devel >= 3:5.2.0
-Provides:	php5-mailparse
-Obsoletes:	php5-mailparse
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -38,6 +36,15 @@ ln -s %{_usrsrc}/php-devel/ext .
 cp %{SOURCE1} %{inifile}
 
 %build
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags}"
+export FFLAGS="%{optflags}"
+
+%if %mdkversion >= 200710
+export CFLAGS="$CFLAGS -fstack-protector"
+export CXXFLAGS="$CXXFLAGS -fstack-protector"
+export FFLAGS="$FFLAGS -fstack-protector"
+%endif
 
 phpize
 %configure2_5x \
@@ -63,5 +70,3 @@ install -m0755 %{soname} %{buildroot}%{_libdir}/php/extensions/
 %doc tests CREDITS README try.php
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
