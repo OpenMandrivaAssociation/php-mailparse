@@ -6,7 +6,7 @@
 Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
 Version:	2.1.1
-Release:	%mkrel 9
+Release:	%mkrel 10
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/mailparse
@@ -36,15 +36,7 @@ ln -s %{_usrsrc}/php-devel/ext .
 cp %{SOURCE1} %{inifile}
 
 %build
-export CFLAGS="%{optflags}"
-export CXXFLAGS="%{optflags}"
-export FFLAGS="%{optflags}"
-
-%if %mdkversion >= 200710
-export CFLAGS="$CFLAGS -fstack-protector"
-export CXXFLAGS="$CXXFLAGS -fstack-protector"
-export FFLAGS="$FFLAGS -fstack-protector"
-%endif
+%serverbuild
 
 phpize
 %configure2_5x \
