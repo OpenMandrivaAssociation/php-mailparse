@@ -5,12 +5,12 @@
 
 Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
-Version:	2.1.1
-Release:	%mkrel 11
+Version:	2.1.2
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/mailparse
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 Patch0:		mailparse-0.9.4-silly_fix.patch
 Requires:	php-cli >= 3:5.2.0
