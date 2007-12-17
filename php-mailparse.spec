@@ -17,7 +17,6 @@ Requires:	php-cli >= 3:5.2.0
 Requires:	php-mbstring
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Mailparse is an extension for parsing and working with email messages. It can
