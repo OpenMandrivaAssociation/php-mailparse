@@ -6,7 +6,7 @@
 Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
 Version:	2.1.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/mailparse
@@ -17,7 +17,7 @@ Requires:	php-cli >= 3:5.2.0
 Requires:	php-mbstring
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Mailparse is an extension for parsing and working with email messages. It can
