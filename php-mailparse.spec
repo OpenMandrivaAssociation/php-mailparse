@@ -5,14 +5,15 @@
 
 Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
-Version:	2.1.4
-Release:	%mkrel 7
+Version:	2.1.5
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/mailparse
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 Patch0:		mailparse-0.9.4-silly_fix.patch
+Patch1:		mailparse-2.1.5-libmbfl_is_external.diff
 Requires:	php-cli >= 3:5.2.0
 Requires:	php-mbstring
 BuildRequires:	php-devel >= 3:5.2.0
@@ -27,6 +28,7 @@ deal with rfc822 and rfc2045 (MIME) compliant messages.
 
 %setup -q -n %{modname}-%{version}
 %patch0 -p0
+%patch1 -p0
 
 # fix strange attribs
 find tests -type f|xargs chmod 644
