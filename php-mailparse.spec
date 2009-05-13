@@ -17,6 +17,7 @@ Patch1:		mailparse-2.1.5-libmbfl_is_external.diff
 Requires:	php-cli >= 3:5.2.0
 Requires:	php-mbstring
 BuildRequires:	php-devel >= 3:5.2.0
+BuildRequires:	mbfl-devel
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
