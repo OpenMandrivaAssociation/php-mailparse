@@ -6,7 +6,7 @@ Summary:	Email message manipulation for PHP
 Name:		php-%{modname}
 Epoch:		1
 Version:	2.1.6
-Release:	4
+Release:	5
 License:	PHP License
 Group:		Development/PHP
 Url:		http://pecl.php.net/package/mailparse
