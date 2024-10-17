@@ -9,7 +9,7 @@ Version:	2.1.6
 Release:	11
 License:	PHP License
 Group:		Development/PHP
-Url:		http://pecl.php.net/package/mailparse
+Url:		https://pecl.php.net/package/mailparse
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 Patch0:		mailparse-0.9.4-silly_fix.patch
