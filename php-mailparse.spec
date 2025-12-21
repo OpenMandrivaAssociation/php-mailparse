@@ -14,6 +14,11 @@ Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 Patch0:		mailparse-0.9.4-silly_fix.patch
 Patch1:		mailparse-2.1.5-libmbfl_is_external.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	mbfl-devel
 BuildRequires:	php-devel >= 3:5.2.0
 Requires:	php-cli >= 3:5.2.0
